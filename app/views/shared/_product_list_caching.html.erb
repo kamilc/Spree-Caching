@@ -1,0 +1,4 @@
+<%= params.to_s %>
+<% cache(request.url, :expires_in => 10.minute) do %>
+  <%= render_original %>
+<% end %>
