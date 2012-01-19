@@ -1,4 +1,4 @@
-<%= params.to_s %>
-<% cache(request.url, :expires_in => 10.minute) do %>
+<% add_cache_index(:products, request.url) %>
+<% cache(request.url) do %>
   <%= render_original %>
 <% end %>

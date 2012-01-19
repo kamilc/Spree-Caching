@@ -3,6 +3,7 @@ module SpreeCaching
     engine_name 'spree_caching'
 
     config.autoload_paths += %W(#{config.root}/lib)
+    config.active_record.observers = :product_observer
 
     # use rspec for tests
     config.generators do |g|
